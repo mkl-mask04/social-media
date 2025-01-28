@@ -1,0 +1,94 @@
+:root {
+  --base-color: rgb(243, 238, 238);
+  --base-variant: #c0c2cc;
+  --text-color: #111528;
+  --secondary-text: #232738;
+  --primary-color: #67708b;
+  --accent-color: #3e90f5;
+  --icon-color: #232738;
+}
+
+.darkmode {
+  --base-color: #141a38;
+  --base-variant: #232b4b;
+  --text-color: #ffffff;
+  --secondary-text: #a4a5b8;
+  --primary-color: #4b5469;
+  --accent-color: #0071ff;
+  --icon-color: #95979e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--base-color);
+  color: var(--text-color);
+  transition: all 0.5s;
+}
+
+header,
+section {
+  padding: 70px min(50px, 7%);
+}
+
+section {
+  background-color: var(--base-variant);
+}
+
+p {
+  margin: 10px 0 20px 0;
+  color: var(--secondary-text);
+}
+
+button {
+  border: none;
+  padding: 0.8em 2em;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.cta-button {
+  background-color: var(--accent-color);
+}
+
+#dark-mode-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+#dark-mode-switch svg {
+  fill: var(--icon-color);
+}
+
+#dark-mode-switch svg:last-child {
+  display: none;
+}
+
+.darkmode #dark-mode-switch svg:first-child {
+  display: none;
+}
+.darkmode #dark-mode-switch svg:last-child {
+  display: block;
+}
